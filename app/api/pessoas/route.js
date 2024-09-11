@@ -10,7 +10,7 @@ const pool = new Pool({
   host: 'localhost',
   database: 'reconhecimento_facial',
   password: 'ds564',
-  port: 7007,
+  port: 7777,
 });
 
 // Cria a pasta para armazenar as imagens, se ainda não existir

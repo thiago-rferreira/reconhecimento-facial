@@ -60,7 +60,7 @@ export default function Home() {
       formData.append('descritorFacial', descritorFacial); // O descritor facial vai como texto
 
       try {
-        await axios.post('/api/pessoa', formData, {
+        await axios.post('/api/pessoas', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
@@ -92,9 +92,12 @@ export default function Home() {
     const detections = await faceapi.detectAllFaces(imgElement).withFaceLandmarks().withFaceDescriptors();
 
     // Buscar pessoas cadastradas na API
-    const res = await axios.get('/api/pessoa');
+    const res = await axios.get('/api/pessoas');
     const pessoas = res.data;
 
+    console.log({screenshot});
+    console.log({detections});
+    console.log({pessoas});
     // Criar um FaceMatcher com as pessoas cadastradas
     const faceMatcher = new faceapi.FaceMatcher(
       pessoas.map((pessoa) => ({

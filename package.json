@@ -12,8 +12,10 @@
     "axios": "^1.7.7",
     "face-api.js": "^0.22.2",
     "next": "14.2.8",
+    "pg": "^8.12.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-webcam": "^7.2.0"
+    "react-webcam": "^7.2.0",
+    "uuid": "^10.0.0"
   }
 }
